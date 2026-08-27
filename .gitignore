@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+.vite/
+dist/
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Vercel
+.vercel/
