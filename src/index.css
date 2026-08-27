@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #fdf6f0;
+    color: #1a0a0a;
+    /* ===== BELL CURSOR - APPLIED TO ENTIRE PAGE ===== */
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctext y='28' font-size='28'%3E🔔%3C/text%3E%3C/svg%3E") 16 16, auto;
+  }
+
+  /* Temple Theme Colors */
+  .temple-gold {
+    color: #D4AF37;
+  }
+  .temple-saffron {
+    color: #FF9933;
+  }
+  .temple-maroon {
+    color: #800020;
+  }
+  .temple-cream {
+    background: #fdf6f0;
+  }
+  .temple-dark {
+    background: #1a0a0a;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30;
+  }
+  .btn-outline {
+    @apply border-2 border-amber-500 text-amber-500 font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:bg-amber-500 hover:text-white hover:scale-105;
+  }
+  .btn-gold {
+    @apply bg-gradient-to-r from-yellow-500 to-amber-500 text-darkBg font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30;
+  }
+
+  /* Section Titles */
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-playfair font-bold;
+  }
+  .section-title .highlight {
+    @apply bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent;
+  }
+  .section-subtitle {
+    @apply text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed;
+  }
+  .section-line {
+    @apply w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-4 rounded-full;
+  }
+
+  /* Cards */
+  .temple-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-amber-100/50;
+  }
+  .temple-card-gold {
+    @apply bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-amber-200/50;
+  }
+
+  /* Decorative Elements */
+  .mandala-divider {
+    @apply text-amber-500 text-2xl flex items-center justify-center gap-4;
+  }
+  .mandala-divider::before,
+  .mandala-divider::after {
+    content: '';
+    @apply flex-1 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent;
+  }
+
+  /* Om Symbol */
+  .om-symbol {
+    @apply text-5xl md:text-6xl text-amber-500 inline-block;
+  }
+}
+
+/* ===== CURSOR FOR INTERACTIVE ELEMENTS ===== */
+@layer components {
+  a, button, input, select, textarea, [role="button"], .clickable, .cursor-pointer {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctext y='28' font-size='28'%3E🔔%3C/text%3E%3C/svg%3E") 16 16, pointer;
+  }
+}
